@@ -1,0 +1,609 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-color: gray;
+}
+
+/* --------------- HEADER ---------------------- */
+
+header{
+    /* background-color: black; */
+    background-color: black;
+    color: white;
+    height: 70px;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000;
+    border-bottom: 1px solid white; */
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#btn_menu{
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-right: 20px;
+}
+
+.contenedor_logo{
+    background-color:black;
+    /* width: 100%; */
+
+    display: flex;
+    align-items: center;
+}
+
+.contenedor_logo svg{
+    height: 30px;
+    width: 30px;
+    margin-left: 20px;
+}
+
+.contenedor_btn{
+    background-color: black;
+    /* width: 100%; */
+
+    display: flex;
+    align-items: center;
+}
+
+/* --------------- FINAL HEADER --------------------- */
+
+/* ---------------- MENU ----------------------- */
+
+.menu{
+    background-color: gold;
+    position: fixed;
+    top: 70px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    padding-top: 30px;
+    z-index: 3000;
+
+    transition: all .3s;
+}
+
+.menu_link{
+    display: block;
+    padding: 20px;
+    color: black;
+    font-weight: 600;
+    font-size: 17px;
+
+    display: flex;
+    align-items: center;
+}
+
+.submenu{
+    /* background-color: rgb(141, 141, 141); */
+    background-color: gold;
+    height: 0;
+
+    transition: all .3s;
+    overflow: hidden;
+}
+
+.submenu .menu_link{
+    padding-left: 80px;
+}
+
+.menu_link svg{
+    margin-right: 20px;
+}
+
+#sageata{
+    margin-left: auto;
+    height: 20px;
+    width: 20px;
+
+    transition: all .3s;
+}
+
+svg{
+    cursor: pointer;
+}
+
+
+/* ------- media queries ------ */
+
+
+@media screen and (min-width:800px){
+    header{
+        display: none;
+    }
+/* 
+    #locatie{
+        color: white;
+    } */
+
+    svg{
+        display: none;
+    }
+
+    .menu{
+        background-color: black;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 80px;
+        padding-top: 0;
+        border-bottom: 1px solid white;
+
+        display: flex;
+        justify-content: center;
+    
+        transition: all .3s;
+    }
+
+    .contenedor_submenu{
+        position: relative;
+    }
+
+    .submenu{
+        position: absolute;
+        width: 200px;
+        z-index: 200;
+        overflow: hidden;
+        z-index: 100;
+        background-color: gold;
+        color: black;
+
+        opacity: 0;
+        visibility: hidden;
+    
+    }
+
+    .submenu .menu_link{
+        color: black;
+    }
+
+
+    .menu_link{
+        font-size: 18px;
+        height: 100%;
+        color: white;
+    }
+
+    .contenedor_submenu:hover .submenu{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu_link:hover{
+        background-color: gainsboro;
+        color: black;
+    }
+
+    .submenu .menu_link:hover{
+        background-color: gainsboro;
+        color: black;
+    }
+
+}
+
+/* ----------------- */
+
+/* -------------- FINAL MENU ------------------ */
+
+/* -------------------- FATADA -------------------- */
+
+/* .contenedor_fatada{
+    background-color: beige;
+} */
+
+.contenedor_cover{
+    /* background-color: red; */
+    max-width: 1100px;
+    margin: 120px auto;
+
+    display: flex;
+}
+
+.contenedor_info{
+    /* background-color: blue; */
+    width: 100%;
+    padding: 20px;  
+}
+
+.contenedor_info h1:nth-child(1){
+    color: white;
+    font-size: 60px;
+}
+
+.contenedor_info h1:nth-child(2){
+    font-size: 40px;
+    margin-top: -10px;
+}
+
+.paragraf1{
+    margin-top: 60px;
+}
+
+.contenedor_info p{
+    font-size: 18px;
+}
+
+.contenedor_info input{
+    margin-top: 80px;
+    font-size: 16px;
+    background-color: gold;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    padding: 12px 23px;
+    cursor: pointer;
+}
+
+
+
+.contenedor_poza{
+    /* background-color: gold; */
+    padding: 20px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_poza img{
+    height: 500px;
+    width: 400px;
+
+    animation: animatie 6s ease infinite;
+
+}
+
+@keyframes animatie {
+    
+    0%{
+        transform: translateY(20px);
+    }
+
+    25%{
+        transform: translateY(-20px);
+    }
+
+    100%{
+        transform: translateY(20px);
+    }
+}
+
+
+/* ------- media queries ------ */
+
+@media screen and (max-width:1000px){
+    .contenedor_poza img{
+        height: 350px;
+        width: 350px;
+    }
+}
+
+@media screen and (max-width:830px) {
+    .contenedor_cover{
+        flex-direction: column;
+    }
+
+    .contenedor_poza img{
+        height: 400px;
+        width: 400px;
+    }
+
+    .contenedor_info{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width:800px) {
+
+    .contenedor_info input{
+        padding: 12px 28px;
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .contenedor_poza img{
+        height: 300px;
+        width: 300px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .contenedor_info h1:nth-child(1){
+        font-size: 65px;
+    }
+
+    .contenedor_info h1:nth-child(2){
+        font-size: 35px;
+    }
+}
+
+/* -------------------- */
+
+/* --------------- FINAL FATADA ------------------ */
+
+/* ----------------- CONTINUT --------------------- */
+
+
+section{
+    /* background-color: red; */
+    margin-top: 100px;
+}
+
+.contenedor_continut{
+    background-color: black;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+
+}
+
+.contenedor_adaptare{
+    /* background-color: pink; */
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contenedor_adaptare svg{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.contenedor_titlu_servicii{
+    /* background-color: red; */
+    padding: 20px;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contenedor_continut_servicii{
+    /* background-color: gold; */
+    padding: 20px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.casuta_servicii{
+    /* background-color: blue; */
+    width: 270px;
+    border: 2px solid white;
+}
+
+.casuta_servicii_titlu{
+    /* background-color: orange; */
+    padding: 13px;
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.casuta_servicii_titlu svg{
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+
+
+.casuta_servicii_continut{
+    /* background-color: rgb(10, 90, 18); */
+    height: 150px;
+    padding: 20px 13px;
+    border-bottom: 1px solid white;
+}
+
+.buton{
+    padding: 20px 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buton input{
+    border: none;
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+
+    background-color: gold;
+
+    transition: all .3s;
+}
+
+.buton input:hover{
+    transform: scale(1.05);
+}
+
+/* -------- media queries -------- */
+
+@media screen and (max-width:950px) {
+    .contenedor_titlu_servicii{
+        text-align: center;
+    }
+}
+
+/* ------------------- */
+
+/* ------------- FINAL CONTINUT ----------------------- */
+
+
+/* ----------------- SOCIAL MEDIA / DETALII ------------- */
+
+.contenedor_continut2{
+    background-color: gray;
+    color: white;
+    padding: 50px 0;
+
+}
+
+.contenedor_adaptare2{
+    /* background-color: aqua; */
+    max-width: 1200px;
+    margin:auto;
+    padding: 30px 10px;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.contenedor_adaptare2 svg{
+    color: rgb(216, 216, 216);
+    display: flex;
+}
+
+.contenedor_adaptare2 h2{
+    color: white;
+}
+
+/* .casuta_social_media{
+    background-color: red;
+} */
+
+.casuta_social_media ul li{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0px;
+    cursor: pointer;
+    color: rgb(216, 216, 216);
+
+    transition: all .3s;
+   
+}
+
+.casuta_social_media ul li:hover{
+    color: white;
+}
+
+.casuta_social_media_titlu{
+    /* background-color: red; */
+    padding: 20px;
+}
+
+.icon_social_media{
+    /* background-color: blue; */
+    padding: 20px;
+}
+
+.icon_social_media svg{
+    margin-right: 10px;
+}
+
+
+/* .casuta_detalii{
+    background-color: beige;
+} */
+
+.casuta_detalii_titlu{
+    /* background-color: green; */
+    padding: 20px;
+
+}
+
+.casuta_detalii_continut{
+    /* background-color: beige; */
+    padding: 20px;
+}
+
+.casuta_detalii_continut ul li{
+    padding: 10px 0px;
+    color: rgb(216, 216, 216);
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+.casuta_detalii_continut ul li:hover{
+    color: white;
+}
+
+/* ---- media queries casute_media --- */
+
+@media screen and (max-width:500px) {
+    .contenedor_adaptare2 h2{
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .contenedor_adaptare2 li{
+        font-size: 14px;
+    }
+}
+
+/* ----------------------------- */
+
+/* ------------- FINAL SOCIAL MEDIA / DETALII------------------- */
+
+/* ----------------- FOOTER ----------------- */
+
+footer{
+    background-color: black;
+    padding: 20px;
+    text-align: center;
+    color: rgb(216, 216, 216);
+}
+
+
+@media screen and (max-width:430px) {
+    footer{
+        font-size: 14px;
+    }
+}
+
+
+/* ------------------ FINAL FOOTER ----------------- */
+
+
+/* ------------ clase pentru JS ----------------- */
+
+.menu_move{
+    left: 0;
+}
+
+.sageata_move{
+    transform: rotate(90deg);
+}
+
+/* ------------------------------------ */
+
+
+/* #locatie:hover{
+    color: black;
+} */
+
+
+
